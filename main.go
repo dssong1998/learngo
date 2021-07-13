@@ -1,7 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/dssong1998/learngo/banking"
+)
 
 func main() {
-    fmt.Println("Hello, World!")
+	account:=banking.NewAccount("DS")
+	account.Deposit(10000)
+	fmt.Println(account)
+	account.Withdraw(3000)
+	fmt.Println(account)
 }
